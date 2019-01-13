@@ -1,5 +1,7 @@
 # Dogecoin Private Daemon Installer Script for Raspberry PI
 
+<img src="https://raw.githubusercontent.com/PrivateDOGP/DOGP-Project/master/github-pi.jpg">
+
 The following script will automate the install of the Dogecoin Private Daemon.
 
 Clone this repository with ```git clone https://github.com/PrivateDOGP/DOGP-PI-Daemon-Installer-Script.git```.
