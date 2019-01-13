@@ -22,6 +22,7 @@ Change this to:
 Save these changes, and restart the service.
 
 ```sudo /etc/init.d/dphys-swapfile stop```
+
 ```sudo /etc/init.d/dphys-swapfile start```
 
 Now you should be able to continue.
