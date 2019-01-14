@@ -18,7 +18,11 @@ sed -i 's/CONF_SWAPSIZE=100/CONF_SWAPSIZE=1024/' /etc/dphys-swapfile
 sudo /etc/init.d/dphys-swapfile stop
 sudo /etc/init.d/dphys-swapfile start
 
-# Install Dependancies
+echo
+echo "Installing dependencies for the DOGP daemon."
+echo
+
+# Install Dependencies
 apt-get -qq update
 
 apt-get -qq install -y zip curl \
