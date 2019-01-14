@@ -28,9 +28,14 @@ apt-get -qq install -y zip curl \
 
 # Install Berkeley DB
 wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
+
 tar -xzf db-4.8.30.NC.tar.gz
+
 cd db-4.8.30.NC/build_unix/
+
 ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=/usr
+
+make --quiet install
 
 # Clone the Dogecoin Private Core repository and compile
 git clone https://github.com/PrivateDOGP/DOGP-Project.git /usr/local/dogecoinprivate
