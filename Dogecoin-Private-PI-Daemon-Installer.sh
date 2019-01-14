@@ -19,7 +19,6 @@ apt-get -qq install -y zip curl \
         libtool \
         autotools-dev \
         autoconf automake pkg-config \
-        libssl-dev \
         libevent-dev \
         bsdmainutils \
         git cmake \
