@@ -50,24 +50,24 @@ cd db-4.8.30.NC/build_unix/
 
 ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=/usr
 
-make -j$(nproc)
+make && make install
 
-make install
+sleep 15
 
 # Clone the Dogecoin Private Core repository and compile
 git clone https://github.com/PrivateDOGP/DOGP-Project.git /usr/local/dogecoinprivate
 
 cd /usr/local/dogecoinprivate
-
 ./autogen.sh
-
 ./configure --disable-tests --without-gui --with-unsupported-ssl
+
+sleep 15
 
 echo
 echo "Ready to build, please be patient and do not unplug your device at any time."
 echo
 
-make -j$(nproc)
+make
 
 echo
 echo "Build complete. Installing now..."
