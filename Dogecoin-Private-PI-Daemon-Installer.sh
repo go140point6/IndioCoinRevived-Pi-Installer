@@ -1,8 +1,13 @@
 #!/bin/bash
 
+# Make sure user is root.
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run using sudo."
+   exit 1
+fi
+
 # Entrypoint
 cd ..
-apt-get update
 
 # Reduce GPU memory since we are CLI based
 sed -i '/gpu_mem/d' /boot/config.txt
@@ -14,6 +19,8 @@ sudo /etc/init.d/dphys-swapfile stop
 sudo /etc/init.d/dphys-swapfile start
 
 # Install Dependancies
+apt-get -qq update
+
 apt-get -qq install -y zip curl \
         build-essential \
         libtool \
@@ -26,7 +33,11 @@ apt-get -qq install -y zip curl \
         libminiupnpc-dev libzmq3-dev \
         libssl1.0-dev libgmp3-dev
 
+apt-get -qq autoremove -y
+
 # Install Berkeley DB
+mkdir -p /tmp/db4 && cd /tmp/db4
+
 wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
 
 tar -xzf db-4.8.30.NC.tar.gz
@@ -35,7 +46,9 @@ cd db-4.8.30.NC/build_unix/
 
 ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=/usr
 
-make --quiet install
+make -j$(nproc)
+
+make install
 
 # Clone the Dogecoin Private Core repository and compile
 git clone https://github.com/PrivateDOGP/DOGP-Project.git /usr/local/dogecoinprivate
