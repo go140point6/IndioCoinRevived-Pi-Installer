@@ -1,4 +1,5 @@
 #!/bin/bash
+# cloned from https://github.com/PrivateDOGP/DOGP-PI-Daemon-Installer-Script
 
 # Make sure user is root.
 if [[ $EUID -ne 0 ]]; then
