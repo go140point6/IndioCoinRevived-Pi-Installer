@@ -70,8 +70,8 @@ sleep 15
 #echo "Hint: for example, 1.10)"
 #read version
 
-#mkdir -p ~/indio-$version && cd ~/indio-$version
-mkdir -p ~/indio-1.10 && cd ~/indio-1.10
+#mkdir -p /home/$(logname)/indio-$version && cd /home/$(logname)/indio-$version
+mkdir -p /home/$(logname)/indio-1.10 && cd /home/$(logname)/indio-1.10
 INDIOR_ROOT=$(pwd)
 git clone https://github.com/shadow-42/Indio.git /tmp/indio
 cd /tmp/indio
@@ -90,7 +90,7 @@ echo "Build complete. Installing now..."
 echo
 
 make install
-chown -R $(logname): ~/$INDIO_ROOT
+chown -R $(logname): /home/$(logname)/$INDIO_ROOT
 
 # Work-in-Progress
 #echo "Do you want to clean up your build files?"
@@ -105,11 +105,11 @@ chown -R $(logname): ~/$INDIO_ROOT
 #echo "Do you want an archive that you can move to another Pi?"
 #select yn in "Yes" "No"; do
 #   case $yn in
-#      Yes ) tar zcvf ~/indio-$version.tar.gz ~/indio-$version
+#      Yes ) tar zcvf /home/$(logname)/indio-$version.tar.gz ~/indio-$version
 #      No ) ;;
 #   esac
 #done
 
 echo
-echo -e "\e[1m\e[92mSetup complete! Now run ~/$INDIOR_ROOT/bin/indiod -daemon or grab the archive\e[0m"
+echo -e "\e[1m\e[92mSetup complete! Now run /home/$(logname)/$INDIOR_ROOT/bin/indiod -daemon or grab the archive!\e[0m"
 echo
