@@ -53,7 +53,7 @@ apt-get autoremove -y
 mkdir -p /tmp/build/db5 && cd /tmp/build/db5
 BDB_PREFIX=$(pwd)
 
-wget http://download.oracle.com/berkeley-db/db-5.1.29.NC.tar.gz
+wget https://download.oracle.com/berkeley-db/db-5.1.29.NC.tar.gz
 
 tar -xzf db-5.1.29.NC.tar.gz
 
