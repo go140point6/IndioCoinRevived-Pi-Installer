@@ -21,7 +21,7 @@ done
 echo "Update Pi swap from default 100 to 2048?"
 select yn in "Yes" "No"; do
    case $yn in
-      Yes ) sed -i 's/CONF_SWAPSIZE=100/CONF_SWAPSIZE=1024/' /etc/dphys-swapfile; /etc/init.d/dphys-swapfile stop; /etc/init.d/dphys-swapfile start;;
+      Yes ) sed -i 's/CONF_SWAPSIZE=100/CONF_SWAPSIZE=2048/' /etc/dphys-swapfile; /etc/init.d/dphys-swapfile stop; /etc/init.d/dphys-swapfile start;;
       No ) ;;
    esac
 done
@@ -64,7 +64,7 @@ sleep 15
 # Clone the Indio Coin Revived Core repository and compile
 
 echo "What version of Indio Coin Revived are you building?"
-echo "Hint: for example, 1.10)
+echo "Hint: for example, 1.10)"
 read version
 mkdir -p ~/indio-$version && cd ~/indio-$version
 INDIOR_ROOT=$(pwd)
