@@ -1,16 +1,18 @@
-# Dogecoin Private Daemon Installer Script for Raspberry PI
+# Indio Coin Revivied Daemon Installer Script for Raspberry Pi
 
-<img src="https://raw.githubusercontent.com/PrivateDOGP/DOGP-Project/master/github-pi.jpg">
+Tested on Raspberry Pi 4 (4 GB model)
 
-The following script will automate the install of the Dogecoin Private Daemon.
+<img src="https://raw.githubusercontent.com/go140point6/IndioCoinRevived-Pi-Installer/master/github-pi.jpg">
 
-Clone this repository with ```git clone https://github.com/PrivateDOGP/DOGP-PI-Daemon-Installer-Script.git```.
+The following script will automate the install of the Indio Coin Revived daemon.
 
-## DOGP-PI-Daemon-Installer-Script
-Use this script to setup the Dogecoin Private daemon. 
+Clone this repository with ```git clone https://github.com/go140point6/IndioCoinRevived-Pi-Installer.git```.
 
-Change into the cloned directory ```cd DOGP-PI-Daemon-Installer-Script```
+## IndioCoinRevived-Pi-Daemon-Installer
+Use this script to setup the Indio Coin Revived daemon. 
 
-Run the setup script as root using ```sudo ./Dogecoin-Private-PI-Daemon-Installer.sh```
+Change into the cloned directory ```cd IndioCoinRevived-Pi-Installer```
 
-Once the installer is complete, run the daemon with ```/usr/local/bin/dogecoinprivated --daemon```
+Run the setup script as root using ```sudo ./IndioCoinRevived-Pi-Installer.sh```
+
+Once the installer is complete, run the daemon with ```~/indio-1.10/bin/indiod -daemon```
