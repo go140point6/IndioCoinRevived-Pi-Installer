@@ -33,9 +33,9 @@ echo "Installing dependencies for the Indio Coin Revived daemon."
 echo
 
 # Install Dependencies
-apt-get -qq update
+apt-get update
 
-apt-get -qq install -y zip curl \
+apt-get install -y zip curl \
         build-essential \
         libtool \
         autotools-dev \
@@ -47,7 +47,7 @@ apt-get -qq install -y zip curl \
         libminiupnpc-dev libzmq3-dev \
         libssl1.0-dev libgmp3-dev
 
-apt-get -qq autoremove -y
+apt-get autoremove -y
 
 # Install Berkeley DB (Indio Coin Revived Core requires BDB 5.1)
 mkdir -p /tmp/build/db5 && cd /tmp/build/db5
