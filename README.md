@@ -2,7 +2,7 @@
 
 Tested on Raspberry Pi 4 (4 GB model)
 
-<img src="https://raw.githubusercontent.com/go140point6/IndioCoinRevived-Pi-Installer/master/github-pi.jpg">
+<img src="https://raw.githubusercontent.com/go140point6/IndioCoinRevived-Pi-Installer/master/github-pinew.jpg">
 
 The following script will automate the install of the Indio Coin Revived daemon.
 
