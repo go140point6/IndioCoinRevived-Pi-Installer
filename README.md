@@ -3,6 +3,8 @@
 Tested on Raspberry Pi 3b+ running Raspbian Stretch (2019-04-08)
 https://downloads.raspberrypi.org/raspbian/images/raspbian-2019-04-09/
 
+Note: Tested on a Pi 4 running Rasbian Buster (2019-07-10) and compile errors due to SSLv3 issue.
+
 <img src="https://raw.githubusercontent.com/go140point6/IndioCoinRevived-Pi-Installer/master/github-pinew.jpg">
 
 The following script will automate the install of the Indio Coin Revived daemon.
