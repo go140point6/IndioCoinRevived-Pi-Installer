@@ -36,3 +36,4 @@ To do:
 - create more interactive script with some additional options
 - build a completely static build without the need for compiling BDB, openssl, etc.
 - see if I can get it working on Buster (Pi 4)
+- figure out how to cross-compile so I don't have to compile on the Pi
