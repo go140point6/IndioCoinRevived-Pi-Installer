@@ -80,16 +80,10 @@ cd /tmp/indio
 sleep 15
 
 echo
-echo "Ready to build, please be patient and do not unplug your device at any time.  This could take some time to complete on a Pi..."
+echo "Ready to build and install, please be patient and do not unplug your device at any time.  This could take some time to complete on a Pi..."
 echo
 
-make
-
-echo
-echo "Build complete. Installing now..."
-echo
-
-make install
+make && make install
 chown -R $(logname): /home/$(logname)/$INDIO_ROOT
 
 # Work-in-Progress
@@ -111,5 +105,5 @@ chown -R $(logname): /home/$(logname)/$INDIO_ROOT
 #done
 
 echo
-echo -e "\e[1m\e[92mSetup complete! Now run /home/$(logname)/$INDIOR_ROOT/bin/indiod -daemon or grab the archive!\e[0m"
+echo -e "\e[1m\e[92mSetup complete! Now run /home/$(logname)/$INDIOR_ROOT/bin/indiod -daemon\e[0m"
 echo
