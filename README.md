@@ -17,3 +17,15 @@ Change into the cloned directory ```cd IndioCoinRevived-Pi-Installer```
 Run the setup script as root using ```sudo ./IndioCoinRevived-Pi-Installer.sh```
 
 Once the installer is complete, run the daemon with ```~/indio-1.10/bin/indiod -daemon```
+
+Be sure to add rcpuser and rpcpassword information to ~/.indio/indio.conf as well as the currently known good nodes:
+
+```
+rpcuser={something long and random here}
+rpcpassword={something longer and randomer here}
+addnode=3.215.162.101:22559
+addnode=174.138.42.183:22559
+addnode=24.202.30.104:22560
+addnode=159.89.80.19:22559
+addnode=144.202.18.18:22559
+```
