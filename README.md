@@ -9,7 +9,7 @@ Note: Tested on a Pi 4 running Rasbian Buster (2019-07-10) and compile errors du
 
 The following script will automate the install of the Indio Coin Revived daemon.
 
-Clone this repository with ```git clone https://github.com/go140point6/IndioCoinRevived-Pi-Installer.git```.
+Clone this repository with ```git clone https://github.com/go140point6/IndioCoinRevived-Pi-Installer.git```
 
 ## IndioCoinRevived-Pi-Daemon-Installer
 Use this script to setup the Indio Coin Revived daemon. 
@@ -31,3 +31,8 @@ addnode=24.202.30.104:22560
 addnode=159.89.80.19:22559
 addnode=144.202.18.18:22559
 ```
+
+To do:
+- create more interactive script with some additional options
+- build a completely static build without the need for compiling BDB, openssl, etc.
+- see if I can get it working on Buster (Pi 4)
