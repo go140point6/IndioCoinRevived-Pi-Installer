@@ -105,5 +105,5 @@ chown -R $(logname): /home/$(logname)/$INDIO_ROOT
 #done
 
 echo
-echo -e "\e[1m\e[92mSetup complete! Now run /home/$(logname)/$INDIOR_ROOT/bin/indiod -daemon\e[0m"
+echo -e "\e[1m\e[92mSetup complete! Now run $INDIOR_ROOT/bin/indiod -daemon\e[0m"
 echo
