@@ -1,4 +1,4 @@
-# Indio Coin Revivied Daemon Installer Script for Raspberry Pi
+# IndioCoin Revivied Daemon Installer Script for Raspberry Pi
 
 Tested on Raspberry Pi 3b+ running Raspbian Stretch (2019-04-08)
 https://downloads.raspberrypi.org/raspbian/images/raspbian-2019-04-09/
